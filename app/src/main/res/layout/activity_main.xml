@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Orders"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Sección de Pastel de Choclo -->
+    <ImageView
+        android:id="@+id/iv_pastel"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pastel"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_pastel_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo: $12.000"
+        app:layout_constraintTop_toBottomOf="@id/iv_pastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_pastel_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tv_pastel_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_pastel_subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        app:layout_constraintTop_toBottomOf="@id/et_pastel_qty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Sección de Cazuela -->
+    <ImageView
+        android:id="@+id/iv_cazuela"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cazuela"
+        app:layout_constraintTop_toBottomOf="@id/tv_pastel_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_cazuela_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cazuela: $10.000"
+        app:layout_constraintTop_toBottomOf="@id/iv_cazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/et_cazuela_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tv_cazuela_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_cazuela_subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        app:layout_constraintTop_toBottomOf="@id/et_cazuela_qty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Sección de Totales -->
+    <Switch
+        android:id="@+id/sw_include_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir propina del 10%"
+        app:layout_constraintTop_toBottomOf="@id/tv_cazuela_subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_total_without_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total sin propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/sw_include_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_without_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_total_with_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total con propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
